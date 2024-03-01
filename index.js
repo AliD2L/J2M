@@ -124,7 +124,7 @@ class J2M {
                     (match, headerLine, separatorLine, rowstr) => {
                         const headers = headerLine.match(/[^|]+(?=\|)/g);
                         const separators = separatorLine.match(/[^|]+(?=\|)/g);
-                        if (headers.length !== separators.length) return match;
+                        if (headers?.length !== separators?.length) return match;
 
                         const rows = rowstr.split('\n');
                         if (rows.length === 2 && headers.length === 1)
